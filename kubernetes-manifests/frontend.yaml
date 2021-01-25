@@ -27,6 +27,7 @@ spec:
       annotations:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
     spec:
+      hostNetwork: true
       serviceAccountName: default
       containers:
         - name: server
