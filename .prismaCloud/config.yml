@@ -22,5 +22,6 @@ template_type: K8S
 
 # Define tags to identify your particular scan. You can use these tags to search the scan details on the Prisma Cloud.
 tags:
-org: Marketing
+org: Palo Alto Networks
 team: PMM
+env: dev
