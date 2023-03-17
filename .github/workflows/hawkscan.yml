@@ -10,7 +10,7 @@ jobs:
       - name: Clone repo
         uses: actions/checkout@v2
       - name: Run Nginx
-        run: docker run --rm --detach --publish 8080:8080 --name front_end_test gcr.io/google-samples/microservices-demo/frontend:v0.2.1
+        run: docker run --rm --detach --publish 8080:80 --name nginx_test nginx
       - name: Run HawkScan
         uses: stackhawk/hawkscan-action@v2
         with:
