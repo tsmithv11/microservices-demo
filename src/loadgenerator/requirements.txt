@@ -13,7 +13,7 @@ flask==1.1.2              # via flask-basicauth, locust
 gevent==20.5.2            # via geventhttpclient, locust
 geventhttpclient==1.4.2   # via locust
 greenlet==0.4.15          # via gevent
-idna==2.8                 # via requests
+idna==3.7                 # via requests
 itsdangerous==1.1.0       # via flask
 jinja2==2.11.2            # via flask
 locust==1.0.2             # via -r requirements.in
