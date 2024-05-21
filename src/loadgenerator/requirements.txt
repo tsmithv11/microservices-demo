@@ -21,7 +21,7 @@ markupsafe==1.1.0         # via jinja2
 msgpack==1.0.0            # via locust
 psutil==5.7.0             # via locust
 pyzmq==17.0.0             # via locust
-requests==2.21.0          # via locust
+requests==2.32.0          # via locust
 six==1.12.0               # via geventhttpclient
 urllib3==1.24.2           # via requests
 werkzeug==1.0.1           # via flask
