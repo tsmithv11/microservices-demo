@@ -22,6 +22,16 @@ from pythonjsonlogger import jsonlogger
 # not sharing the modules for logging, yet.
 class CustomJsonFormatter(jsonlogger.JsonFormatter):
   def add_fields(self, log_record, record, message_dict):
+    """
+    Ensure the JSON log record contains normalized `timestamp` and `severity` fields.
+    
+    If `timestamp` is missing from `log_record`, it is set from `record.created`. If `severity` exists in `log_record` it is converted to uppercase; otherwise `severity` is set from `record.levelname`.
+    
+    Parameters:
+        log_record (dict): The JSON-serializable mapping being produced for the log entry; this object is modified in place.
+        record (logging.LogRecord): The original LogRecord providing fallback values.
+        message_dict (dict): Additional message fields parsed from the log message (unused by this formatter).
+    """
     super(CustomJsonFormatter, self).add_fields(log_record, record, message_dict)
     if not log_record.get('timestamp'):
       log_record['timestamp'] = record.created
