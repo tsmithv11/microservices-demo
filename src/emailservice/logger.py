@@ -19,7 +19,7 @@ import sys
 from pythonjsonlogger import jsonlogger
 
 # TODO(yoshifumi) this class is duplicated since other Python services are
-# not sharing the modules for logging.
+# not sharing the modules for logging, yet.
 class CustomJsonFormatter(jsonlogger.JsonFormatter):
   def add_fields(self, log_record, record, message_dict):
     super(CustomJsonFormatter, self).add_fields(log_record, record, message_dict)
